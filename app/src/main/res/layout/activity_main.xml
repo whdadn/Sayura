@@ -4,7 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_green"
+    android:id="@+id/coordinate"
     tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/transparentBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000"
+        android:visibility="invisible"/>
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottom_app_bar"
@@ -12,14 +21,59 @@
         android:layout_height="wrap_content"
         app:fabCradleRoundedCornerRadius="15dp"
         app:fabCradleMargin="8dp"
+        android:backgroundTint="@color/dark_green"
         android:layout_gravity="bottom"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/light_green"
         android:src="@drawable/ic_add"
+        app:backgroundTint="@color/dark_green"
+        app:borderWidth="5dp"
         app:layout_anchor="@id/bottom_app_bar"
-        tools:ignore="ContentDescription" />
+        app:maxImageSize="27dp"
+        app:tint="@color/dark_green"
+        android:clickable="true"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck"
+        android:focusable="true" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginBottom="90dp"
+        android:backgroundTint="@color/light_green"
+        android:src="@drawable/ic_camera"
+        app:backgroundTint="@color/dark_green"
+        app:borderWidth="5dp"
+        app:layout_anchor="@id/bottom_app_bar"
+        app:maxImageSize="32dp"
+        app:tint="@color/dark_green"
+        android:visibility="invisible"
+        android:clickable="true"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck"
+        android:focusable="true" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="90dp"
+        app:layout_anchorGravity="end"
+        android:backgroundTint="@color/light_green"
+        android:src="@drawable/ic_upload"
+        app:backgroundTint="@color/dark_green"
+        app:borderWidth="5dp"
+        app:layout_anchor="@id/bottom_app_bar"
+        app:maxImageSize="32dp"
+        app:tint="@color/dark_green"
+        android:visibility="invisible"
+        android:clickable="true"
+        android:focusable="true"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
